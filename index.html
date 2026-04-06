@@ -1,151 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Searching Center Student Edition</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: white;
-}
-
-/* HEADER */
-header {
-    padding: 20px;
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
-}
-
-/* SEARCH BAR */
-.search-box {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-}
-
-.search-box input {
-    width: 60%;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    font-size: 16px;
-}
-
-/* NAV */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-nav button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    background: #334155;
-    color: white;
-    cursor: pointer;
-}
-
-nav button:hover {
-    background: #475569;
-}
-
-/* CARDS */
-.container {
-    padding: 20px;
-}
-
-.card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    transition: 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.02);
-}
-
-/* SUBJECT GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-}
-
-.subject {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.subject:hover {
-    background: #334155;
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Searching Center Student Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="navbar">
+        <a class="brand" href="#top">Searching Center<br><span>Student Edition</span></a>
+        <div class="nav-links">
+          <a href="#subjects">Subjects</a>
+          <a href="#tools">Tools</a>
+          <a href="#highlights">Highlights</a>
+        </div>
+      </nav>
 
-<header>
-🔎 Searching Center Student Edition
-</header>
+      <div class="hero-content" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Smart study starts here</p>
+          <h1>Find your next lesson, tool, or idea in one place.</h1>
+          <p class="hero-text">
+            A modern student portal for staying organized, searching faster, and jumping into class resources with less friction.
+          </p>
+          <form class="search-panel" id="searchForm">
+            <label class="sr-only" for="siteSearch">Search the portal</label>
+            <input id="siteSearch" type="search" placeholder="Search subjects, tools, and study topics">
+            <button type="submit">Search</button>
+          </form>
+          <p class="search-result" id="searchResult">Try searching for algebra, docs, essay help, or history.</p>
+        </div>
 
-<div class="search-box">
-<input type="text" placeholder="Search anything...">
-</div>
+        <aside class="hero-card">
+          <p class="card-label">Today at a glance</p>
+          <div class="mini-stat">
+            <strong>4</strong>
+            <span>Core subjects ready to explore</span>
+          </div>
+          <div class="mini-stat">
+            <strong>1</strong>
+            <span>Search bar for quick access</span>
+          </div>
+          <div class="mini-stat">
+            <strong>100%</strong>
+            <span>Responsive layout for phones and laptops</span>
+          </div>
+        </aside>
+      </div>
+    </header>
 
-<nav>
-<button>Home</button>
-<button>Homework</button>
-<button>Schedule</button>
-</nav>
+    <main>
+      <section class="subjects-section" id="subjects">
+        <div class="section-heading">
+          <p class="eyebrow">Explore subjects</p>
+          <h2>Pick a learning lane and jump in.</h2>
+        </div>
 
-<div class="container">
+        <div class="subject-grid">
+          <article class="subject-card">
+            <div class="subject-icon">M</div>
+            <h3>Math</h3>
+            <p>Practice equations, graphs, and problem-solving with focused study support.</p>
+            <a href="#">Open math resources</a>
+          </article>
 
-<div class="card">
-<h2>Welcome</h2>
-<p>This is your upgraded student portal 🚀</p>
-</div>
+          <article class="subject-card">
+            <div class="subject-icon">G</div>
+            <h3>Google Tools</h3>
+            <p>Access Docs, Slides, Classroom workflows, and digital organization tips.</p>
+            <a href="#">Open Google tools</a>
+          </article>
 
-<div class="card">
-<h2>Subjects</h2>
+          <article class="subject-card">
+            <div class="subject-icon">LA</div>
+            <h3>Language Arts</h3>
+            <p>Build reading, writing, grammar, and speaking skills with clear next steps.</p>
+            <a href="#">Open language arts</a>
+          </article>
 
-<div class="grid">
-<div class="subject">Math</div>
-<div class="subject">Language Arts</div>
-<div class="subject">Social Studies</div>
-<div class="subject">Google Tools</div>
-</div>
+          <article class="subject-card">
+            <div class="subject-icon">SS</div>
+            <h3>Social Studies</h3>
+            <p>Review geography, civics, culture, and history through engaging topic hubs.</p>
+            <a href="#">Open social studies</a>
+          </article>
+        </div>
+      </section>
 
-</div>
+      <section class="info-strip" id="tools">
+        <div class="info-card">
+          <p class="card-label">Quick access</p>
+          <h3>Simple tools, less clutter</h3>
+          <p>Use the search bar to jump to topics fast and keep your study flow focused.</p>
+        </div>
+        <div class="info-card" id="highlights">
+          <p class="card-label">Designed for students</p>
+          <h3>Clear layout on every screen</h3>
+          <p>The layout adapts smoothly for mobile, tablet, and desktop use.</p>
+        </div>
+      </section>
+    </main>
+  </div>
 
-<div class="card">
-<h2>Quick Links</h2>
-<button onclick="window.open('https://classroom.google.com')">
-Google Classroom
-</button>
-</div>
-
-<div class="card">
-<h2>Homework</h2>
-<p>Coming soon...</p>
-</div>
-
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
