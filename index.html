@@ -1,112 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Searching Center Student Edition</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Searching Center Student Edition</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+/* NAV */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 15px;
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    padding: 50px;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.search-box {
+    margin-top: 20px;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+    border: none;
+}
+
+.search-box button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+</style>
 </head>
+
 <body>
-  <div class="page-shell">
-    <header class="hero">
-      <nav class="navbar">
-        <a class="brand" href="#top">Searching Center<br><span>Student Edition</span></a>
-        <div class="nav-links">
-          <a href="#subjects">Subjects</a>
-          <a href="#tools">Tools</a>
-          <a href="#highlights">Highlights</a>
-        </div>
-      </nav>
 
-      <div class="hero-content" id="top">
-        <div class="hero-copy">
-          <p class="eyebrow">Smart study starts here</p>
-          <h1>Find your next lesson, tool, or idea in one place.</h1>
-          <p class="hero-text">
-            A modern student portal for staying organized, searching faster, and jumping into class resources with less friction.
-          </p>
-          <form class="search-panel" id="searchForm">
-            <label class="sr-only" for="siteSearch">Search the portal</label>
-            <input id="siteSearch" type="search" placeholder="Search subjects, tools, and study topics">
-            <button type="submit">Search</button>
-          </form>
-          <p class="search-result" id="searchResult">Try searching for algebra, docs, essay help, or history.</p>
-        </div>
+<header>
+    <div>🔍 Searching Center</div>
+    <nav>
+        <a href="#">Subjects</a>
+        <a href="#">Tools</a>
+        <a href="#">Highlights</a>
+    </nav>
+</header>
 
-        <aside class="hero-card">
-          <p class="card-label">Today at a glance</p>
-          <div class="mini-stat">
-            <strong>4</strong>
-            <span>Core subjects ready to explore</span>
-          </div>
-          <div class="mini-stat">
-            <strong>1</strong>
-            <span>Search bar for quick access</span>
-          </div>
-          <div class="mini-stat">
-            <strong>100%</strong>
-            <span>Responsive layout for phones and laptops</span>
-          </div>
-        </aside>
-      </div>
-    </header>
+<section class="hero">
+    <h1>Find your next lesson, tool, or idea.</h1>
+    <p>Everything in one place.</p>
 
-    <main>
-      <section class="subjects-section" id="subjects">
-        <div class="section-heading">
-          <p class="eyebrow">Explore subjects</p>
-          <h2>Pick a learning lane and jump in.</h2>
-        </div>
+    <div class="search-box">
+        <input placeholder="Search...">
+        <button>Search</button>
+    </div>
+</section>
 
-        <div class="subject-grid">
-          <article class="subject-card">
-            <div class="subject-icon">M</div>
-            <h3>Math</h3>
-            <p>Practice equations, graphs, and problem-solving with focused study support.</p>
-            <a href="#">Open math resources</a>
-          </article>
+<section class="cards">
+    <div class="card">📘 Math</div>
+    <div class="card">🧠 Language Arts</div>
+    <div class="card">🌍 Social Studies</div>
+    <div class="card">🧰 Google Tools</div>
+</section>
 
-          <article class="subject-card">
-            <div class="subject-icon">G</div>
-            <h3>Google Tools</h3>
-            <p>Access Docs, Slides, Classroom workflows, and digital organization tips.</p>
-            <a href="#">Open Google tools</a>
-          </article>
-
-          <article class="subject-card">
-            <div class="subject-icon">LA</div>
-            <h3>Language Arts</h3>
-            <p>Build reading, writing, grammar, and speaking skills with clear next steps.</p>
-            <a href="#">Open language arts</a>
-          </article>
-
-          <article class="subject-card">
-            <div class="subject-icon">SS</div>
-            <h3>Social Studies</h3>
-            <p>Review geography, civics, culture, and history through engaging topic hubs.</p>
-            <a href="#">Open social studies</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="info-strip" id="tools">
-        <div class="info-card">
-          <p class="card-label">Quick access</p>
-          <h3>Simple tools, less clutter</h3>
-          <p>Use the search bar to jump to topics fast and keep your study flow focused.</p>
-        </div>
-        <div class="info-card" id="highlights">
-          <p class="card-label">Designed for students</p>
-          <h3>Clear layout on every screen</h3>
-          <p>The layout adapts smoothly for mobile, tablet, and desktop use.</p>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
+
